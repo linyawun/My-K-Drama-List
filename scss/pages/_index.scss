@@ -1,0 +1,115 @@
+.header{
+    background-image: url('/img/pages/index/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    @include pc{
+        border-bottom-right-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+        max-width: 100%;
+    }
+    @include pad{
+        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+    h2{
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+        @include pc(){
+            padding-top: 32px;
+        }
+    }
+    input{
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    }
+    .searchBar{
+        @include pc(){
+            top: 170%;
+        }
+        @include pad(){
+            top: 163%;
+        }
+        @include iphone6Plus(){
+            top: 160%;
+        }
+        .searchBtn{
+            z-index: 4;
+            right: -1.25rem;
+        }
+    }
+
+}
+
+.subtitle{
+    position: relative;
+    margin-bottom: 0;
+  // z-index: 1;
+  display: block;
+  &::before{
+    content: "";
+    position: absolute;
+    background: $primary;
+    height: 120px;
+    width: 120px;
+    left: 0px;
+    top: -48px;
+    border-radius: 100%;
+    z-index: -1;
+  }
+}
+
+.smalltitle{
+    position: relative;
+    // z-index: 1;
+    display: block;
+    margin-bottom: 0;
+    &::before{
+      content: "";
+      position: absolute;
+      background: $primary;
+      height: 72px;
+      width: 72px;
+      left: 0px;
+      top: -18px;
+      border-radius: 100%;
+      z-index: -1;
+    }
+}
+.arrowLink{
+    text-decoration: none;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      background-image: url('/img/pages/index/rightarrow.svg');
+      // background: #F6CA1C;
+      height: 13px;
+      width: 180px;
+      right: 0px;
+      top: 18px;
+      // border-radius: 100%;
+    //   z-index: -1;
+    }
+    &:hover{
+        color: $secondary;
+        &::before{
+            right: -10px;
+          }
+    }
+}
+.arrowCTA{
+    padding: 12px 16px;
+}
+
+.articleImg{
+    display: block;
+    width: 100%;
+    height: 203px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    &:hover{
+        -webkit-transform: scale(1.15);
+        transform: scale(1.15);
+    }
+}
+

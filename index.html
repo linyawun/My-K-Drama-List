@@ -1,0 +1,1541 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <link rel="shortcut icon" href="img/K-logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>My K-Drama List</title>
+
+    
+  </head>
+  <body>
+    <div class="bg">
+      <div class="circle1"><img src="img/layout/Bg01.svg" alt=""></div>
+      <div class="circle2"><img src="img/layout/Bg02.svg" alt=""></div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light py-1">
+      <div class="container container-nav">
+        <a class="navbar-brand" href="index.html">
+          <h1 class="mb-0">My K-Drama List</h1>
+        </a>
+
+        <button class="navbar-toggler text-darkPrimary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <div class="navbar-toggler-hamburger d-lg-none d-block"></div>
+        </button>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="collapse navbar-collapse justify-content-end position-absolute position-lg-relative top-100 start-0 w-100 " id="navbarNav">
+          <ul class="navbar-nav text-center pb-lg-0 pb-4">
+            <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+            <li class="nav-item p-lg-0 px-2">
+              <a class="nav-link py-lg-1 px-2 py-3 text-center" href="#">探索韓劇</a>
+            </li>
+            <li class="nav-item p-lg-0 px-2">
+              <a class="nav-link py-lg-1 px-2 py-3 text-center" href="#">社群評價</a>
+            </li>
+            <li class="nav-item p-lg-0 px-2">
+              <a class="nav-link py-lg-1 px-2 py-3 text-center" href="#">關於我們</a>
+            </li>
+            <li class="nav-item p-lg-0 px-2 py-1 ms-lg-1 ms-0">
+              <a class="nav-link py-lg-1 px-2 py-2 btn btn-primary rounded-pill d-inline-block callToAction" href="#">登入/註冊</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+
+    <div class="container header">
+      <div class="row justify-content-center py-lg-12 pb-8 pt-10 mb-7">
+        <div class="col-lg-6 col-11 position-relative">
+          <h2 class="text-center text-white mb-5">追劇不踩雷，建立專屬你的韓劇清單</h2>
+          <div class="input-group position-lg-relative start-lg-0 translate-middle-lg-none position-absolute start-50 translate-middle searchBar">
+            <input type="text" class="form-control rounded-pill py-2 ps-3" placeholder="找韓劇" aria-label="找韓劇" aria-describedby="button-addon2">
+            <button class="btn btn-primary rounded-pill position-absolute px-3 top-50 translate-middle searchBtn" type="button" id="button-addon2">搜尋</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      
+      <!-- <div class="row justify-content-center py-lg-12 pb-8 pt-10 mb-7 header">
+        <div class="col-lg-6 col-11 position-relative">
+          <h2 class="text-center text-white mb-5">追劇不踩雷，建立專屬你的韓劇清單</h2>
+          <div class="input-group position-lg-relative start-lg-0 translate-middle-lg-none position-absolute start-50 translate-middle searchBar">
+            <input type="text" class="form-control rounded-pill py-2 ps-3" placeholder="找韓劇" aria-label="找韓劇" aria-describedby="button-addon2">
+            <button class="btn btn-primary rounded-pill position-absolute px-3 top-50 translate-middle searchBtn" type="button" id="button-addon2">搜尋</button>
+          </div>
+        </div>
+      </div> -->
+      <div class="row mb-11">
+        <div class="col-lg-3 col-md-6 text-center">
+          <img src="img/pages/index/search.svg" alt="" class="mb-3">
+          <h4 class="mb-2">多元標籤搜尋</h4>
+          <p class="text-darkSecondary">利用不同搜尋標籤，不論你是顏值派、劇情派還是跟隨流行派，都能從搜尋中找到你偏愛的那一款！</p>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <img src="img/pages/index/list.svg" alt="" class="mb-3">
+          <h4 class="mb-2">專屬你的韓劇清單</h4>
+          <p class="text-darkSecondary">將有興趣的韓劇納入清單，不必害怕劇荒，只要跟著清單一部接一部！</p>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <img src="img/pages/index/info.svg" alt="" class="mb-3">
+          <h4 class="mb-2">清楚易懂的韓劇資訊</h4>
+          <p class="text-darkSecondary">列出韓劇的年份、主要演員與劇情介紹，讓你看劇前先了解這部劇到底在演什麼，避免踩到雷點！</p>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center">
+          <img src="img/pages/index/social.svg" alt="" class="mb-3">
+          <h4 class="mb-2">豐富社群評價</h4>
+          <p class="text-darkSecondary">透過韓劇評分和網友們的韓劇清單，找到跟你的看劇品味一樣的朋友，跟著他 / 她的韓劇清單總不會錯！</p>
+        </div>
+      </div>
+      <div class="mb-10">
+        <div class="row mb-7 justify-content-between">
+          <div class="col-6">
+            <h2 class="subtitle ps-3">熱門排行榜</h2>
+          </div>
+          <div class="col-6 d-flex justify-content-end align-items-center">
+            <div class="me-4 d-flex">
+              <span class="btn btn-outline-primary text-darkPrimary material-symbols-outlined fs-4 rounded-circle me-2 iconPrimary swiper-buttonPrev">
+                chevron_left
+              </span>
+              <span class="btn btn-outline-primary text-darkPrimary material-symbols-outlined fs-4 rounded-circle iconPrimary swiper-buttonNext">
+                chevron_right
+              </span>
+            </div>
+            <div class="swiper-Pagination text-darkPrimary">
+              <h5><span class="me-2">1</span>/<span class="ms-2">3</span></h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper hotSwiper px-md-3 px-1">
+          <ul class="swiper-wrapper hotDramaList">
+              <li class="swiper-slide pb-1">
+                <div class="cardImg mb-1">
+                  <a href="#"><img src="img/dramas/浪漫醫生金師傅 第2季.png" class="dramaImg" alt=""></a>
+                </div>
+                <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">浪漫醫生金師傅 第 2 季</a></h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">醫療</a>
+                <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>9.7</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                </div>
+              </li>
+              <li class="swiper-slide pb-1">
+                  <div class="cardImg mb-1">
+                    <a href="#"><img src="img/dramas/學校2013.png" class="dramaImg" alt=""></a>
+                  </div>
+                <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">學校 2013</a></h5>
+                    <a href="#" class="btn btn-outline-primary mb-1 tag">校園</a>
+                    <div class="d-flex justify-content-between align-items-start">
+                      <a href="#" class="d-flex align-items-center star">
+                        <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                          star
+                        </span>
+                        <span>9.7</span>
+                      </a>
+                      <div>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                          <span class="material-symbols-outlined">
+                            favorite
+                          </span>
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                          <span class="material-symbols-outlined">
+                            add
+                          </span>
+                        </a>
+                      </div>
+                  </div>
+              </li>
+              <li class="swiper-slide pb-1">
+                  <div class="cardImg mb-1">
+                    <a href="#"><img src="img/dramas/少年法庭.jpeg" class="dramaImg" alt=""></a>
+                  </div>
+                <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">少年法庭</a></h5>
+                    <a href="#" class="btn btn-outline-primary mb-1 tag">律政</a>
+                    <div class="d-flex justify-content-between align-items-start">
+                      <a href="#" class="d-flex align-items-center star">
+                        <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                          star
+                        </span>
+                        <span>9.7</span>
+                      </a>
+                      <div>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                          <span class="material-symbols-outlined">
+                            favorite
+                          </span>
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                          <span class="material-symbols-outlined">
+                            add
+                          </span>
+                        </a>
+                      </div>
+                  </div>
+              </li>
+              <li class="swiper-slide pb-1">
+                  <div class="cardImg mb-1">
+                    <a href="#"><img src="img/dramas/我的出走日記.jpg" class="dramaImg" alt=""></a>
+                  </div>
+                <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">我的出走日記</a></h5>
+                    <a href="#" class="btn btn-outline-primary mb-1 tag">社會</a>
+                    <div class="d-flex justify-content-between align-items-start">
+                      <a href="#" class="d-flex align-items-center star">
+                        <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                          star
+                        </span>
+                        <span>9.7</span>
+                      </a>
+                      <div>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                          <span class="material-symbols-outlined">
+                            favorite
+                          </span>
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                          <span class="material-symbols-outlined">
+                            add
+                          </span>
+                        </a>
+                      </div>
+                  </div>
+              </li>
+              <li class="swiper-slide pb-1">
+                  <div class="cardImg mb-1">
+                    <a href="#"><img src="img/dramas/我的大叔.jpg" class="dramaImg" alt=""></a>
+                  </div>
+                <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">我的大叔</a></h5>
+                    <a href="#" class="btn btn-outline-primary mb-1 tag">社會</a>
+                    <div class="d-flex justify-content-between align-items-start">
+                      <a href="#" class="d-flex align-items-center star">
+                        <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                          star
+                        </span>
+                        <span>9.7</span>
+                      </a>
+                      <div>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                          <span class="material-symbols-outlined symbols-fill">
+                            favorite
+                          </span>
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                          <span class="material-symbols-outlined">
+                            add
+                          </span>
+                        </a>
+                      </div>
+                  </div>
+              </li>
+              <li class="swiper-slide pb-1">
+                  <div class="cardImg mb-1">
+                    <a href="#"><img src="img/dramas/秘密森林.jpg" class="dramaImg" alt=""></a>
+                  </div>
+                <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">秘密森林</a></h5>
+                    <a href="#" class="btn btn-outline-primary mb-1 tag">懸疑</a>
+                    <div class="d-flex justify-content-between align-items-start">
+                      <a href="#" class="d-flex align-items-center star">
+                        <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                          star
+                        </span>
+                        <span>9.7</span>
+                      </a>
+                      <div>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                          <span class="material-symbols-outlined">
+                            favorite
+                          </span>
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                          <span class="material-symbols-outlined">
+                            add
+                          </span>
+                        </a>
+                      </div>
+                  </div>
+              </li>
+              <li class="swiper-slide pb-1">
+                  <div class="cardImg mb-1">
+                    <a href="#"><img src="img/dramas/奶酪陷阱.jfif" class="dramaImg" alt=""></a>
+                  </div>
+                <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">奶酪陷阱</a></h5>
+                    <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a><a href="#" class="btn btn-outline-primary mb-1 tag">校園</a>
+                    <div class="d-flex justify-content-between align-items-start">
+                      <a href="#" class="d-flex align-items-center star">
+                        <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                          star
+                        </span>
+                        <span>9.7</span>
+                      </a>
+                      <div>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                          <span class="material-symbols-outlined">
+                            favorite
+                          </span>
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                          <span class="material-symbols-outlined">
+                            add
+                          </span>
+                        </a>
+                      </div>
+                  </div>
+              </li>
+              <li class="swiper-slide pb-1">
+                  <div class="cardImg mb-1">
+                    <a href="#"><img src="img/dramas/那年我們的夏天.jpg" class="dramaImg" alt=""></a>
+                  </div>
+                <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">那年，我們的夏天</a></h5>
+                    <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a>
+                    <div class="d-flex justify-content-between align-items-start">
+                      <a href="#" class="d-flex align-items-center star">
+                        <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                          star
+                        </span>
+                        <span>9.7</span>
+                      </a>
+                      <div>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                          <span class="material-symbols-outlined">
+                            favorite
+                          </span>
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                          <span class="material-symbols-outlined">
+                            done
+                          </span>
+                        </a>
+                      </div>
+                  </div>
+              </li>
+              <li class="swiper-slide pb-1">
+                  <div class="cardImg mb-1">
+                    <a href="#"><img src="img/dramas/怪物.jpg" class="dramaImg" alt=""></a>
+                  </div>
+                <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">怪物</a></h5>
+                    <a href="#" class="btn btn-outline-primary mb-1 tag">懸疑</a>
+                    <div class="d-flex justify-content-between align-items-start">
+                      <a href="#" class="d-flex align-items-center star">
+                        <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                          star
+                        </span>
+                        <span>9.7</span>
+                      </a>
+                      <div>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                          <span class="material-symbols-outlined">
+                            favorite
+                          </span>
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                          <span class="material-symbols-outlined">
+                            add
+                          </span>
+                        </a>
+                      </div>
+                  </div>
+              </li>
+              <li class="swiper-slide pb-1">
+                  <div class="cardImg mb-1">
+                    <a href="#"><img src="img/dramas/我們的藍調時光.jfif" class="dramaImg" alt=""></a>
+                  </div>
+                <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">我們的藍調時光</a></h5>
+                    <a href="#" class="btn btn-outline-primary mb-1 tag">社會</a>
+                    <div class="d-flex justify-content-between align-items-start">
+                      <a href="#" class="d-flex align-items-center star">
+                        <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                          star
+                        </span>
+                        <span>9.7</span>
+                      </a>
+                      <div>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                          <span class="material-symbols-outlined">
+                            favorite
+                          </span>
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                          <span class="material-symbols-outlined">
+                            add
+                          </span>
+                        </a>
+                      </div>
+                  </div>
+              </li>
+
+          </ul>
+        </div> 
+      <!-- <ul class="row ">
+            <li class="col-12 col-md-4 swiper-slide">
+              <div class="px-3">
+                <div class="cardImg mb-1">
+                  <a href="#"><img src="img/dramas/浪漫醫生金師傅 第2季.png" class="dramaImg" alt=""></a>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">浪漫醫生金師傅 第 2 季</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">醫療</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>9.7</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+            </li>
+            <li class="col-12 col-md-4 d-none d-md-block">
+              <div class="px-3">
+                <div class="cardImg mb-1">
+                  <a href="#"><img src="img/dramas/學校2013.png" class="dramaImg" alt=""></a>
+                </div>
+                
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">學校 2013</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">校園</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>9.7</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined symbols-fill">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+            </li>
+            <li class="col-12 col-md-4 d-none d-md-block ">
+              <div class="px-3">
+                <div class="cardImg mb-1">
+                  <a href="#"><img src="img/dramas/少年法庭.jpeg" class="dramaImg" alt=""></a>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">少年法庭</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">律政</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>9.7</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          done
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+              </div>
+            </li>
+      </ul>  -->
+        
+      </div>
+
+      <div class="mb-9">
+        <div class="row mb-4 justify-content-between align-items-center">
+          <div class="col-6">
+            <h3 class="smalltitle ps-3">愛情類</h3>
+          </div>
+          <div class="col-6 d-flex justify-content-end">
+            <a href="#" class="link-darkPrimary pe-7 pe-md-8 arrowLink">更多愛情韓劇</a>
+          </div>
+        </div>
+
+        <div class="swiper categorySwiper px-md-3 px-1">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/今生是第一次.jpg" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/1.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">今生是第一次</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>9.7</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/主君的太陽.jpg" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/2.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">主君的太陽</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>9.2</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/祕密花園.png" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/3.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">祕密花園</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>8.8</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/我的女友是九尾狐.png" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/4.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">我的女友是九尾狐</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>8.6</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/聽見你的聲音.png" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/5.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">聽見你的聲音</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a><a href="#" class="btn btn-outline-primary mb-1 tag">懸疑</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>8.5</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+          </ul>
+          <div class="swiper-scrollbar"></div>
+        </div>
+
+        <!-- <ul class="row gx-2 justify-content-between">
+          <li class="col">
+            <div class="px-0 ps-3">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/今生是第一次.jpg" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/1.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">今生是第一次</a></h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>9.7</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+            
+                
+  
+          </li>
+          <li class="col">
+            <div class="px-1">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/主君的太陽.jpg" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/2.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">主君的太陽</a></h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>9.2</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </li>
+          <li class="col">
+            <div class="px-1">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/祕密花園.png" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/3.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">祕密花園</a></h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>8.8</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </li>
+          <li class="col">
+            <div class="px-1">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/我的女友是九尾狐.png" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/4.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">我的女友是九尾狐</a></h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>8.6</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </li>
+          <li class="col">
+            <div class="px-0 pe-3">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/聽見你的聲音.png" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/5.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">聽見你的聲音</a></h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a><a href="#" class="btn btn-outline-primary mb-1 tag">懸疑</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>8.5</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </li>
+  
+  
+  
+        </ul> -->
+      </div>
+
+      
+      <div class="mb-9">
+        <div class="row mb-4 justify-content-between align-items-center">
+          <div class="col-6">
+            <h3 class="smalltitle ps-3">懸疑類</h3>
+          </div>
+          <div class="col-6 d-flex justify-content-end">
+            <a href="#" class="link-darkPrimary pe-7 pe-md-8 arrowLink">更多懸疑韓劇</a>
+          </div>
+        </div>
+        <div class="swiper categorySwiper px-md-3 px-1">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/信號.jpg" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/1.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">信號</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">懸疑</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>9.7</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/當你沉睡時.jpeg" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/2.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">當你沉睡時</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a><a href="#" class="btn btn-outline-primary mb-1 tag">懸疑</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>9.2</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/秘密森林.jpg" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/3.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">秘密森林</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">懸疑</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>8.8</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/德魯納酒店.jpeg" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/4.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">德魯納酒店</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a><a href="#" class="btn btn-outline-primary mb-1 tag">懸疑</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>8.6</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/聽見你的聲音.png" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/5.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">聽見你的聲音</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a><a href="#" class="btn btn-outline-primary mb-1 tag">懸疑</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>8.5</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+          </ul>
+          <div class="swiper-scrollbar"></div>
+        </div>
+        <!-- <ul class="row gx-2 justify-content-between">
+          <li class="col">
+            <div class="px-0 ps-3">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/信號.jpg" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/1.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2">信號</h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">懸疑</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>9.7</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+            
+                
+  
+          </li>
+          <li class="col">
+            <div class="px-1">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/當你沉睡時.jpeg" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/2.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2">當你沉睡時</h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">懸疑</a><a href="#" class="btn btn-outline-primary mb-1 tag">律政</a><a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>9.2</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </li>
+          <li class="col">
+            <div class="px-1">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/秘密森林.jpg" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/3.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2">秘密森林</h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">懸疑</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>8.8</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </li>
+          <li class="col">
+            <div class="px-1">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/德魯納酒店.jpeg" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/4.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2">德魯納酒店</h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a><a href="#" class="btn btn-outline-primary mb-1 tag">懸疑</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>8.6</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </li>
+          <li class="col">
+            <div class="px-0 pe-3">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/聽見你的聲音.png" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/5.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2">聽見你的聲音</h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">愛情</a><a href="#" class="btn btn-outline-primary mb-1 tag">懸疑</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>8.5</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </li>
+  
+  
+  
+        </ul> -->
+      </div>
+
+      <div class="mb-7">
+        <div class="row mb-4 justify-content-between align-items-center">
+          <div class="col-6">
+            <h3 class="smalltitle ps-3">社會類</h3>
+          </div>
+          <div class="col-6 d-flex justify-content-end">
+            <a href="#" class="link-darkPrimary pe-7 pe-md-8 arrowLink">更多社會韓劇</a>
+          </div>
+        </div>
+        <div class="swiper categorySwiper px-md-3 px-1">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/我的大叔.jpg" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/1.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">我的大叔</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">社會</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>9.7</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/我們的藍調時光.jfif" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/2.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">我們的藍調時光</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">社會</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>9.2</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/未生.jpg" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/3.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">未生</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">社會</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>8.8</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/非常律師禹英禑.jpg" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/4.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">非常律師禹英禑</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">社會</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>8.6</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+            <li class="swiper-slide pt-2 pb-1">
+                <div class="cardImg cardImg-small mb-1">
+                  <a href="#"><img src="img/dramas/我的出走日記.jpg" class="dramaImg" alt=""></a>
+                  <div class="cardRank"><img src="img/rank/5.svg" alt=""></div>
+                </div>
+              <h5 class="card-title mb-2"><a href="#" class="link-darkPrimary">我的出走日記</a></h5>
+                  <a href="#" class="btn btn-outline-primary mb-1 tag">社會</a>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <a href="#" class="d-flex align-items-center star">
+                      <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                        star
+                      </span>
+                      <span>8.5</span>
+                    </a>
+                    <div>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                        <span class="material-symbols-outlined">
+                          favorite
+                        </span>
+                      </a>
+                      <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                        <span class="material-symbols-outlined">
+                          add
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+            </li>
+          </ul>
+          <div class="swiper-scrollbar"></div>
+        </div>
+        <!-- <ul class="row gx-2 mb-10 justify-content-between">
+          <li class="col">
+            <div class="px-0 ps-3">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/我的大叔.jpg" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/1.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2">我的大叔</h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">社會</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>9.7</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+
+          </li>
+          <li class="col">
+            <div class="px-1">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/我的大叔.jpg" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/2.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2">我的大叔</h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">社會</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>9.2</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </li>
+          <li class="col">
+            <div class="px-1">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/未生.jpeg" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/3.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2">未生</h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">社會</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>8.8</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </li>
+          <li class="col">
+            <div class="px-1">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/非常律師禹英禑.jpg" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/4.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2">非常律師禹英禑</h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">社會</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>8.6</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </li>
+          <li class="col">
+            <div class="px-0 pe-3">
+              <div class="cardImg cardImg-small mb-1">
+                <a href="#"><img src="img/dramas/我的出走日記.jpg" class="dramaImg" alt=""></a>
+                <div class="cardRank"><img src="img/rank/5.svg" alt=""></div>
+              </div>
+            <h5 class="card-title mb-2">我的出走日記</h5>
+                <a href="#" class="btn btn-outline-primary mb-1 tag">社會</a>
+                <div class="d-flex justify-content-between align-items-start">
+                  <a href="#" class="d-flex align-items-center star">
+                    <span class="material-symbols-outlined symbols-fill text-primary starIcon">
+                      star
+                    </span>
+                    <span>8.5</span>
+                  </a>
+                  <div>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle me-1 iconLightSecondary">
+                      <span class="material-symbols-outlined">
+                        favorite
+                      </span>
+                    </a>
+                    <a href="#" class="btn btn-outline-secondary rounded-circle iconLightSecondary add">
+                      <span class="material-symbols-outlined">
+                        add
+                      </span>
+                    </a>
+                  </div>
+                </div>
+            </div>
+          </li>
+  
+  
+  
+        </ul> -->
+      </div>
+
+      <div class="row justify-content-center mb-11">
+        <div class="col text-center">
+          <p class="fs-6">沒有你要的韓劇？試試看</p>
+          <!-- <button class="btn btn-secondary rounded-pill arrowCTA px-2">
+            探索韓劇
+          </button> -->
+          <a href="#" class="btn btn-secondary rounded-pill arrowCTA" type="button">
+            <div class="d-flex align-items-center ">
+              <span>探索韓劇</span>
+              <span class="material-symbols-outlined">
+                chevron_right
+              </span>
+            </div>
+
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid bg-white">
+      <div class="container">
+        <div class="row py-7 justify-content-between align-items-center">
+          <div class="col-md-4 d-md-block d-none"></div>
+          <div class="col-md-4 col-12 mb-md-0 mb-2">
+            <h2 class="text-center">影評專欄</h2>
+          </div>
+          <div class="col-md-4 col-12 d-flex justify-content-lg-end justify-content-center">
+            <a href="#" class="link-darkPrimary pe-8 arrowLink">更多影評文章</a>
+          </div>
+        </div>
+        <ul class="row pb-7 articlesPreview">
+          <li class="col-12 card mb-3">
+              <div class="row p-3 justify-content-between flex-column-reverse flex-md-row">
+                <div class="col-md-9 col-12">
+                  <div class="card-body">
+                    <h5 class="card-title text-secondary mb-2"><a href="#" class="link-secondary">《我的出走日記》：在失落中尋找沙洲，不提供「標準答案」的人生級神劇</a></h5>
+                    <p class="card-text text-muted mb-2">
+                      <span class="me-1">艾爾</span>
+                        |
+                      <span class="ms-1">2022-10-09</span>
+                    </p>
+                    <p class="card-text mb-2">仔細回想為何如此平凡的際遇能夠讓觀眾陷入，關鍵正在於這些精雕細琢的對白，以及這些充滿迷思與缺陷的人物，或多或少都令我們看到自己或旁人的人生，而真實人生，往往比戲劇還要難以預期、且更容易引發共鳴。</p>
+                    <a href="#" class="link-primary">閱讀更多</a>
+                  </div>
+                </div>
+                <div class="col-md-3 col-12 cardImg">
+                  <a href="#"><img src="img/dramas/我的出走日記.jpg" alt="..." class="articleImg"></a>
+                </div>
+              </div>
+          </li>
+          <li class="col-12 card mb-3">
+            <div class="row p-3 justify-content-between flex-column-reverse flex-md-row">
+              <div class="col-md-9 col-12">
+                <div class="card-body">
+                  <h5 class="card-title text-secondary mb-2"><a href="#" class="link-secondary">《機智醫生生活》：因為平凡，反而脫穎而出</a></h5>
+                  <p class="card-text text-muted mb-2">
+                    <span class="me-1">霍克玟</span>
+                      |
+                    <span class="ms-1">2021-06-14</span>
+                  </p>
+                  <p class="card-text mb-2">《機智醫生生活》是一部跳脫韓劇傳統框架的作品。大部分韓劇都可以見到善惡二元對立的設定，絕對的壞人以及絕對的好人相互抗衡，這兩派人馬中，主角的戲劇性階層最高、配角其次、跑龍套的演員最低。然而，《機智醫生生活》卻完全背道而馳，為韓劇的戲劇性下了不同定義。</p>
+                  <a href="#" class="link-primary">閱讀更多</a>
+                </div>
+              </div>
+              <div class="col-md-3 col-12 cardImg">
+                <a href="#"><img src="img/dramas/機智醫生生活.jpg" alt="..." class="articleImg"></a>
+              </div>
+            </div>
+        </li>
+        </ul>
+      </div>
+
+
+
+    </div>
+
+    <!-- footer -->
+    <div class="container-fluid py-2">
+      <div class="text-center text-darkSecondary">
+        <p class="fs-6 mb-0">Copyright©️2022 My K-Drama List All Rights Reserved.</p>
+        <p class="fs-7 fw-light mb-0">僅學習作品用無商業用途</p>
+      </div>
+      <!-- <p class="text-center fs-6 text-darkSecondary mb-0">Copyright©️2022 My K-Drama List All Rights Reserved.</p> -->
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <script type="module" src="js/index-animation.js"></script>
+    <script src="js/helpers/api.js"></script>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
