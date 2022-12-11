@@ -13469,7 +13469,7 @@ body {
 .navbar .navbar-brand h1, .navbar .navbar-brand .h1 {
   width: 260px; /*自訂文字寬度*/
   height: 33px;
-  background-image: url("/img/layout/Logo.svg");
+  background-image: url("../img/layout/Logo.svg");
   background-position: center;
   background-size: cover;
   text-indent: 110%;
@@ -13624,7 +13624,7 @@ body {
 }
 
 .header {
-  background-image: url("/img/pages/index/banner.jpg");
+  background-image: url("../img/pages/index/banner.jpg");
   background-position: center;
   background-size: cover;
   border-bottom-right-radius: 2rem;
@@ -13715,7 +13715,7 @@ body {
 .arrowLink::before {
   content: "";
   position: absolute;
-  background-image: url("/img/pages/index/rightarrow.svg");
+  background-image: url("../img/pages/index/rightarrow.svg");
   height: 13px;
   width: 180px;
   right: 0px;

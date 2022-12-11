@@ -1,5 +1,5 @@
 .header{
-    background-image: url('/img/pages/index/banner.jpg');
+    background-image: url('../img/pages/index/banner.jpg');
     background-position: center;
     background-size: cover;
     border-bottom-right-radius: 2rem;
@@ -81,7 +81,7 @@
     &::before{
       content: "";
       position: absolute;
-      background-image: url('/img/pages/index/rightarrow.svg');
+      background-image: url('../img/pages/index/rightarrow.svg');
       // background: #F6CA1C;
       height: 13px;
       width: 180px;

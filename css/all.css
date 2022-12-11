@@ -13469,7 +13469,7 @@ body {
 .navbar .navbar-brand h1, .navbar .navbar-brand .h1 {
   width: 260px; /*自訂文字寬度*/
   height: 33px;
-  background-image: url("/img/layout/Logo.svg");
+  background-image: url("../img/layout/Logo.svg");
   background-position: center;
   background-size: cover;
   text-indent: 110%;
