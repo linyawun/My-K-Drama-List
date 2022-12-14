@@ -3,7 +3,7 @@ const hotDramaList = document.querySelector('.hotDramaList');//熱門排行榜
 const articlesPreview = document.querySelector('.articlesPreview');//影評文章
 let articleList = [];
 let hotDramas = [];
-function getDramas(){
+function getHotDramas(){
   axios.get(`${baseUrl}/dramas?_sort=rank&_order=desc&_start=0&_end=10`)
   .then((res)=>{
     console.log(res.data);
@@ -52,6 +52,9 @@ function renderHotDramas(hotDramas){
   });
   hotDramaList.innerHTML = str;
 }
+function getCategoryDramas(){
+
+}
 function getArticles(){
   //取最新排序前兩者
     axios.get(`${baseUrl}/articles?_sort=timeStamp&_order=desc&_start=0&_end=2`)
@@ -92,8 +95,8 @@ function renderArticleList(data){
 
 }
 function init(){
-  // getDramas();
-  // getArticles();
+  getHotDramas();
+  getArticles();
 
 }
 init();
