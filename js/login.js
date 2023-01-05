@@ -122,11 +122,10 @@ function signin(data){
       sweetAlertToast("登入成功",'success',1500);
       saveUserToLocal(response.data);
       setTimeout(() => {
-        //console.log('Redirect!');
-        location.href = '../index.html'
+        //window.location.replace('/'); //local路徑
+        window.location.replace('/My-K-Drama-List/index.html'); //github page路徑
       }, 1500);//跳轉到首頁
-      console.log(response.data);
-      //location.href = "../index.html";//跳轉到首頁
+      //console.log(response.data);
       //signinForm.reset();
   })
   .catch((error)=>{
