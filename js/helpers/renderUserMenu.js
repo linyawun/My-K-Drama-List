@@ -34,7 +34,7 @@ export function logout(event) {
     sweetAlertToast('已登出','success', 1500)
     //alert('已登出');
     setTimeout(() => {
-      window.location.replace('/');
+      window.location.replace('/index.html');
     }, 1500);
 }
 
