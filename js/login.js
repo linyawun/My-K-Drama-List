@@ -121,7 +121,7 @@ function signin(data){
   .then((response)=>{
       sweetAlertToast("登入成功",'success',1500);
       saveUserToLocal(response.data);
-      let redirectPath = '/';
+      let redirectPath = '/index.html';
       setTimeout(() => {
         //console.log('Redirect!');
         window.location.replace(redirectPath);
