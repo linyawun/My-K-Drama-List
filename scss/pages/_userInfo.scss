@@ -1,0 +1,13 @@
+.list-group{
+    .account-link-item{
+        &:hover{
+            background: rgba(246,202,28,.25);
+        }
+    }
+    .active{
+        z-index: 1;
+        &:hover{
+            background: $primary;
+        }
+    }
+}

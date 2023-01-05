@@ -151,6 +151,7 @@ $utilities: map-merge(
     // Sizing utilities
     // scss-docs-start utils-sizing
     "width": (
+      responsive: true,
       property: width,
       class: w,
       values: (
@@ -177,6 +178,7 @@ $utilities: map-merge(
       values: (100: 100vw)
     ),
     "height": (
+      responsive: true,
       property: height,
       class: h,
       values: (
@@ -568,7 +570,9 @@ $utilities: map-merge(
         0: 0,
         1: $border-radius-sm,
         2: $border-radius,
-        3: $border-radius-lg,
+        3: $border-radius-reg,
+        4: $border-radius-lg,
+        5: $border-radius-xl,
         circle: 50%,
         pill: $border-radius-pill
       )

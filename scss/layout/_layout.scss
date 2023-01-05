@@ -98,6 +98,11 @@ body{
         top: 0;
         right: 0;
     }
+    .nav-item{
+        @include pc(){
+            width: 100%;
+        }
+    }
     .navbar-brand{
         h1{
             width: 260px;   /*自訂文字寬度*/
@@ -106,7 +111,7 @@ body{
             background-position: center;
             background-size: cover;
             @include hide-text();
-            @include iphone6(){
+            @include iphone6Plus(){
                 width: 150px;   /*自訂文字寬度*/
                 height: 19px;
             }
@@ -154,6 +159,9 @@ body{
             //   transform: translateY(-50%);
               border-radius: 100%;
               z-index: -1;
+              @include pc(){
+                background: transparent;
+            }
             }
             &:hover{
                 &::before{
@@ -174,6 +182,15 @@ body{
             @include pc(){
                 display: block;
                 width: 100%;
+            }
+        }
+        .callToActionCur{
+            background-color: $lightSecondary;
+            border: none;
+            &:hover{
+                background-color: $lightSecondary;
+                border: none;
+                box-shadow: none;
             }
         }
     }
@@ -247,6 +264,22 @@ body{
           }
         }
         
+    }
+    .dropdown-menu{
+        left: -30px;
+        .dropdown-item{
+            color: $darkPrimary;
+            &:hover, &:focus{
+                background: rgba(246,202,28,.25);
+                color: $darkPrimary;
+            }
+            @include pc(){
+                text-align: center;
+            }
+        }    
+        .active:hover{
+            background: $primary;
+        }
     }
 
 }

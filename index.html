@@ -40,20 +40,33 @@
           <span class="navbar-toggler-icon"></span>
         </button> -->
         <div class="collapse navbar-collapse justify-content-end position-absolute position-lg-relative top-100 start-0 w-100 " id="navbarNav">
-          <ul class="navbar-nav text-center pb-lg-0 pb-4">
+          <ul class="navbar-nav text-center pb-lg-0 pb-4 align-items-center">
             <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
             <li class="nav-item p-lg-0 px-2">
-              <a class="nav-link py-lg-1 px-2 py-3 text-center" href="#">探索韓劇</a>
+              <a class="nav-link py-lg-1 px-2 py-3 text-center" href="pages/exploreDrama.html">探索韓劇</a>
             </li>
             <li class="nav-item p-lg-0 px-2">
               <a class="nav-link py-lg-1 px-2 py-3 text-center" href="#">社群評價</a>
             </li>
             <li class="nav-item p-lg-0 px-2">
-              <a class="nav-link py-lg-1 px-2 py-3 text-center" href="#">關於我們</a>
+              <a class="nav-link py-lg-1 px-2 py-3 text-center" href="pages/aboutUs.html">關於我們</a>
             </li>
-            <li class="nav-item p-lg-0 px-2 py-1 ms-lg-1 ms-0">
-              <a class="nav-link py-lg-1 px-2 py-2 btn btn-primary rounded-pill d-inline-block callToAction" href="#">登入/註冊</a>
-            </li>
+            <!-- <li class="nav-item p-lg-0 px-2 dropdown">
+              <a class="nav-link py-lg-1 px-2 py-3 dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                會員專區
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">會員資料</a></li>
+                <li><a class="dropdown-item" href="#">我的待看清單</a></li>
+                <li><a class="dropdown-item" href="#">我的最愛清單</a></li>
+                <li><a class="dropdown-item" href="#">登出</a></li>
+              </ul>
+            </li> -->
+            <div class="w-100 w-lg-auto" data-guestMenu>
+              <li class="nav-item p-lg-0 px-2 py-1 ms-lg-1 ms-0">
+                <a class="nav-link py-lg-1 px-2 py-2 btn btn-primary rounded-pill d-inline-block callToAction" href="pages/login.html">登入/註冊</a>
+              </li>
+            </div>
           </ul>
         </div>
       </div>
@@ -64,8 +77,8 @@
         <div class="col-lg-6 col-11 position-relative">
           <h2 class="text-center text-white mb-5">追劇不踩雷，建立專屬你的韓劇清單</h2>
           <div class="input-group position-lg-relative start-lg-0 translate-middle-lg-none position-absolute start-50 translate-middle searchBar">
-            <input type="text" class="form-control rounded-pill py-2 ps-3" placeholder="找韓劇" aria-label="找韓劇" aria-describedby="button-addon2">
-            <button class="btn btn-primary rounded-pill position-absolute px-3 top-50 translate-middle searchBtn" type="button" id="button-addon2">搜尋</button>
+            <input type="text" class="form-control rounded-pill py-2 ps-3" placeholder="找韓劇" aria-label="找韓劇" aria-describedby="button-addon2" data-searchInput>
+            <button class="btn btn-primary rounded-pill position-absolute px-3 top-50 translate-middle searchBtn" type="button" id="button-addon2" data-searchBtn>搜尋</button>
           </div>
         </div>
       </div>
@@ -125,7 +138,7 @@
         </div>
 
         <div class="swiper hotSwiper px-md-3 px-1">
-          <ul class="swiper-wrapper hotDramaList">
+          <ul class="swiper-wrapper" data-hotDramaList data-dramaList>
               <!-- <li class="swiper-slide pb-1">
                 <div class="cardImg mb-1">
                   <a href="#"><img src="img/dramas/浪漫醫生金師傅 第2季.png" class="dramaImg" alt=""></a>
@@ -408,13 +421,13 @@
             <h3 class="smalltitle ps-3">愛情類</h3>
           </div>
           <div class="col-6 d-flex justify-content-end">
-            <a href="#" class="link-darkPrimary pe-7 pe-md-8 arrowLink">更多愛情韓劇</a>
+            <a href="pages/exploreDrama.html?type=愛情" class="link-darkPrimary pe-7 pe-md-8 arrowLink">更多愛情韓劇</a>
           </div>
         </div>
 
         <div class="swiper categorySwiper px-md-3 px-1">
-          <ul class="swiper-wrapper">
-            <li class="swiper-slide pt-2 pb-1">
+          <ul class="swiper-wrapper" data-category="愛情" data-dramaList>
+            <!-- <li class="swiper-slide pt-2 pb-1">
                 <div class="cardImg cardImg-small mb-1">
                   <a href="#"><img src="img/dramas/今生是第一次.jpg" class="dramaImg" alt=""></a>
                   <div class="cardRank"><img src="img/rank/1.svg" alt=""></div>
@@ -553,7 +566,7 @@
                       </a>
                     </div>
                   </div>
-            </li>
+            </li> -->
           </ul>
           <div class="swiper-scrollbar"></div>
         </div>
@@ -725,12 +738,12 @@
             <h3 class="smalltitle ps-3">懸疑類</h3>
           </div>
           <div class="col-6 d-flex justify-content-end">
-            <a href="#" class="link-darkPrimary pe-7 pe-md-8 arrowLink">更多懸疑韓劇</a>
+            <a href="pages/exploreDrama.html?type=懸疑" class="link-darkPrimary pe-7 pe-md-8 arrowLink">更多懸疑韓劇</a>
           </div>
         </div>
         <div class="swiper categorySwiper px-md-3 px-1">
-          <ul class="swiper-wrapper">
-            <li class="swiper-slide pt-2 pb-1">
+          <ul class="swiper-wrapper" data-category="懸疑" data-dramaList>
+            <!-- <li class="swiper-slide pt-2 pb-1">
                 <div class="cardImg cardImg-small mb-1">
                   <a href="#"><img src="img/dramas/信號.jpg" class="dramaImg" alt=""></a>
                   <div class="cardRank"><img src="img/rank/1.svg" alt=""></div>
@@ -869,7 +882,7 @@
                       </a>
                     </div>
                   </div>
-            </li>
+            </li> -->
           </ul>
           <div class="swiper-scrollbar"></div>
         </div>
@@ -1039,12 +1052,12 @@
             <h3 class="smalltitle ps-3">社會類</h3>
           </div>
           <div class="col-6 d-flex justify-content-end">
-            <a href="#" class="link-darkPrimary pe-7 pe-md-8 arrowLink">更多社會韓劇</a>
+            <a href="pages/exploreDrama.html?type=社會" class="link-darkPrimary pe-7 pe-md-8 arrowLink">更多社會韓劇</a>
           </div>
         </div>
         <div class="swiper categorySwiper px-md-3 px-1">
-          <ul class="swiper-wrapper">
-            <li class="swiper-slide pt-2 pb-1">
+          <ul class="swiper-wrapper" data-category="社會" data-dramaList>
+            <!-- <li class="swiper-slide pt-2 pb-1">
                 <div class="cardImg cardImg-small mb-1">
                   <a href="#"><img src="img/dramas/我的大叔.jpg" class="dramaImg" alt=""></a>
                   <div class="cardRank"><img src="img/rank/1.svg" alt=""></div>
@@ -1183,7 +1196,7 @@
                       </a>
                     </div>
                   </div>
-            </li>
+            </li> -->
           </ul>
           <div class="swiper-scrollbar"></div>
         </div>
@@ -1351,7 +1364,7 @@
           <!-- <button class="btn btn-secondary rounded-pill arrowCTA px-2">
             探索韓劇
           </button> -->
-          <a href="#" class="btn btn-secondary rounded-pill arrowCTA" type="button">
+          <a href="pages/exploreDrama.html" class="btn btn-secondary rounded-pill arrowCTA" type="button">
             <div class="d-flex align-items-center ">
               <span>探索韓劇</span>
               <span class="material-symbols-outlined">
@@ -1375,7 +1388,7 @@
             <a href="#" class="link-darkPrimary pe-8 arrowLink">更多影評文章</a>
           </div>
         </div>
-        <ul class="row pb-7 articlesPreview">
+        <ul class="row pb-7" data-articlesPreview>
           <li class="col-12 card mb-3">
               <div class="row p-3 justify-content-between flex-column-reverse flex-md-row">
                 <div class="col-md-9 col-12">
@@ -1430,6 +1443,13 @@
       <!-- <p class="text-center fs-6 text-darkSecondary mb-0">Copyright©️2022 My K-Drama List All Rights Reserved.</p> -->
     </div>
 
+    <!-- loading的內容 -->
+    <div class="preloader">
+      <div class="status">
+          <span class="loader"></span>
+      </div>
+    </div>
+
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
@@ -1443,6 +1463,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.10/dist/sweetalert2.all.min.js"></script>
     
     <script type="module" src="js/index-animation.js"></script>
     <script src="js/helpers/api.js"></script>

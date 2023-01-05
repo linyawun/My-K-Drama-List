@@ -80,6 +80,51 @@ img::-moz-selection {
         color: $gray-800;
     }
 }
+.breadcrumb{
+    font-size: 14px;
+}
+.bootstrap-select{ 
+    .dropdown-toggle{
+    &:hover{
+        box-shadow: none;
+    }
+    &:focus{
+        outline-offset: 0px;
+        border-color: #fbe58e;
+        outline: 0 !important;
+        -webkit-box-shadow: 0 0 0 0.25rem rgba(246,202,28,.25);
+        box-shadow: 0 0 0 0.25rem rgba(246,202,28,.25);
+     }
+    }
+    // .btn-light:focus{
+    //     border-color: #fbe58e;
+    //     outline: 0;
+    //     -webkit-box-shadow: 0 0 0 0.25rem rgba(246,202,28,.25);
+    //     box-shadow: 0 0 0 0.25rem rgba(246,202,28,.25);
+    // }
+    .dropdown-item{
+        &:hover, &:focus{
+        background: rgba(246,202,28,.25);
+        color: $gray-900;
+        }
+        &.active{
+            color: $gray-900;
+        }
+    }
+}
+.nav-pills{
+    .nav-link{
+        color: $darkSecondary;
+        &.active{
+            background: $lightSecondary;
+        }
+    }
+
+}
+.input-group-text{
+    background: #fff;
+}
+
 
 //icon
 .material-symbols-outlined{
@@ -101,6 +146,7 @@ img::-moz-selection {
     padding: 5px;   
 }
 .iconLightSecondary{
+    font-size: 24px;
     line-height: 1;
     padding: 10px;
     padding-bottom: 8px;
@@ -110,10 +156,9 @@ img::-moz-selection {
     &:hover{
         color: $secondary;
         background: $lightSecondary;
-        .material-symbols-outlined{
-            font-variation-settings:
-            'FILL' 1
-        }
+        font-variation-settings:
+        'FILL' 1
+        
     }
 }
 .star{
@@ -128,6 +173,11 @@ img::-moz-selection {
 .starIcon{
     transition: all 0.1s;
     margin-right: 7px;
+}
+.visibilityIcon{
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 //hashtag
@@ -151,10 +201,6 @@ img::-moz-selection {
         display: block;
         overflow: hidden;
     }
-    // width: 100%;
-    // height: 256px;
-    // -o-object-fit: cover;
-    // object-fit: cover;
     .dramaImg{
         display: block;
         width: 100%;
@@ -169,6 +215,11 @@ img::-moz-selection {
 
 }
 .cardImg-small{
+    position: relative;
+    a{
+        display: block;
+        overflow: hidden;
+    }
     .dramaImg{
         display: block;
         width: 100%;
@@ -179,6 +230,9 @@ img::-moz-selection {
             -webkit-transform: scale(1.15);
             transform: scale(1.15);
         }
+        // @include pad(){
+        //     height: 300px;
+        // }
     }
     .cardRank{
         position: absolute;
@@ -194,3 +248,68 @@ img::-moz-selection {
 .swiper-pagination-fraction{
     width: auto;
 }
+//sweetalert2
+.swal2-modal{
+    // button.swal2-styled{
+    //     padding: 10px 20px;
+    //     //background-color: $primary;
+    // }
+    .swal2-icon{
+        // width: 4.5em;
+        // height: 4.5em;
+        margin: 1.75em auto 0.7em;
+        .swal2-icon-content{
+            //font-size: 2.75em;
+        }
+    }
+    .swal2-html-container{
+        font-weight: 400;
+        font-size: 1.25em;
+        margin: 0;
+    }
+}
+
+//loader
+.preloader {/*   這是整個會蓋住畫面的底色色塊  */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 9999;
+    display: none;
+  }
+.status {/*   這是中間loading的css,我們盡量讓他畫面置中  */
+    position: fixed;
+    /* width: 218px;
+    height: 419px;
+    margin-left: -140px;
+    margin-top: -160px; */
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: none;
+}
+  
+  .loader {
+      width: 60px;
+      height: 60px;
+      border: 5px solid #FFF;
+      border-bottom-color: $primary;
+      border-radius: 50%;
+      display: inline-block;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+      }
+  
+      @keyframes rotation {
+      0% {
+          transform: rotate(0deg);
+      }
+      100% {
+          transform: rotate(360deg);
+      }
+} 
+
+
