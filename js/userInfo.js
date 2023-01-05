@@ -57,7 +57,7 @@ function getUserInfo(){
             localStorage.clear();
             sweetAlert('登入逾時，請嘗試重新登入','warning');
             setTimeout(() => {
-                window.location.replace('/');
+                location.href = '../../index.html';
             }, 300);
         };
     })
@@ -101,7 +101,7 @@ function updatePassword(data){
         sweetAlert('更新密碼成功，請重新登入','success');
         localStorage.clear();
         setTimeout(() => {
-            window.location.replace('/');
+          location.href = '../../index.html';
         }, 300);
     })
     .catch((error)=>{
@@ -111,7 +111,7 @@ function updatePassword(data){
             localStorage.clear();
             sweetAlert('登入逾時，請嘗試重新登入','warning');
             setTimeout(() => {
-                window.location.replace('/');
+                location.href = '../../index.html';
             }, 300);
         };
     })
@@ -123,7 +123,7 @@ function init(){
     if(localLoginChecker==false){
         sweetAlert('您的操作錯誤，請登入帳號','error');
         setTimeout(() => {
-            window.location.replace('/');
+          location.href = '../../index.html'
         }, 300);
     }
     getUserInfo();

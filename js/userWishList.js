@@ -26,7 +26,7 @@ function getUserWishlist(userId, token){
         //alert('登入逾時，請重新登入');
         localStorage.clear();
         setTimeout(() => {
-          window.location.reload();
+            window.location.replace('../../index.html');
         }, 1200);
       }
       console.log(error);
@@ -81,7 +81,7 @@ function init(){
     if(localLoginChecker==false){
         sweetAlert('您的操作錯誤，請登入帳號','error');
         setTimeout(() => {
-            window.location.replace('/');
+            window.location.replace('../../index.html');
         }, 300);
     }
     getUserWishlist(userId, token)

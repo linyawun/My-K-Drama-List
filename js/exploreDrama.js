@@ -33,7 +33,7 @@ function getDramas(requirement=null){
             dramaTypeStr+=`type_like=${item}&`
         })
         const url = `${baseUrl}/dramas?name_like=${dramaName}&${dramaTypeStr}year_gte=${dramaYear}&rank_gte=${dramaRank}&_sort=rank&_order=desc`;
-        console.log(url);
+        //console.log(url);
         toggleLoading();
         axios.get(url)
             .then((res)=>{

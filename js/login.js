@@ -121,10 +121,9 @@ function signin(data){
   .then((response)=>{
       sweetAlertToast("登入成功",'success',1500);
       saveUserToLocal(response.data);
-      let redirectPath = '/index.html';
       setTimeout(() => {
         //console.log('Redirect!');
-        window.location.replace(redirectPath);
+        location.href = '../index.html'
       }, 1500);//跳轉到首頁
       console.log(response.data);
       //location.href = "../index.html";//跳轉到首頁
