@@ -15,7 +15,6 @@ function getDramas(requirement=null){
     if(requirement==null){
         axios.get(`${baseUrl}/dramas?_sort=rank&_order=desc`)
         .then((res)=>{
-          console.log(res.data);
           dramaList = res.data;
           renderDramas(dramaList);
         })
@@ -33,11 +32,9 @@ function getDramas(requirement=null){
             dramaTypeStr+=`type_like=${item}&`
         })
         const url = `${baseUrl}/dramas?name_like=${dramaName}&${dramaTypeStr}year_gte=${dramaYear}&rank_gte=${dramaRank}&_sort=rank&_order=desc`;
-        //console.log(url);
         toggleLoading();
         axios.get(url)
             .then((res)=>{
-            //   console.log(res.data);
               renderDramas(res.data);
             })
             .catch((error)=>{
@@ -59,12 +56,10 @@ function getUserLovelist(userId, token){
   })
   .then((res)=>{
     loveList = res.data.map((item)=>item.dramaId);
-    //console.log(loveList);
   })
   .catch((error)=>{
     if (error?.response?.status === 401) {
       sweetAlert('登入逾時，請重新登入', 'warning');
-      //alert('登入逾時，請重新登入');
       localStorage.clear();
       setTimeout(() => {
         window.location.reload();

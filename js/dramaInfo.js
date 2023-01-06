@@ -15,11 +15,8 @@ function getDramaInfo(id){
     toggleLoading();
     axios.get(`${baseUrl}/dramas/${id}`)
     .then((response)=>{
-        // console.log(response.data);
         dramaObj = response.data;
         renderDramaData(dramaObj);
-        // document.querySelector("h1").textContent = response.data.id
-        // document.querySelector(".content").textContent = response.data.content
     })
     .catch((error)=>{
         console.log(error);
@@ -38,12 +35,10 @@ function getUserLovelist(userId, token){
   })
   .then((res)=>{
     loveList = res.data.map((item)=>item.dramaId);
-    //console.log(loveList);
   })
   .catch((error)=>{
     if (error?.response?.status === 401) {
       sweetAlert('登入逾時，請重新登入', 'warning');
-      //alert('登入逾時，請重新登入');
       localStorage.clear();
       setTimeout(() => {
         window.location.reload();
@@ -170,7 +165,6 @@ function getComments(id){
   toggleLoading();
   axios.get(`${baseUrl}/dramas/${id}/comments?_expand=user&_sort=timeStamp&_order=asc`)
   .then((response)=>{
-    //console.log(response.data);
     dramaComments = response.data;
     renderComments(dramaComments);
   })

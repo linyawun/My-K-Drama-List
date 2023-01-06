@@ -15,7 +15,6 @@ function getHotDramas(){
   toggleLoading();
   axios.get(`${baseUrl}/dramas?_sort=rank&_order=desc&_start=0&_end=10`)
   .then((res)=>{
-    //console.log(res.data);
     hotDramas = res.data;
     renderHotDramas(hotDramas);
   })
@@ -36,8 +35,6 @@ function getUserLovelist(userId, token){
   })
   .then((res)=>{
     loveList = res.data.map((item)=>item.dramaId);
-    
-    //console.log(loveList);
   })
   .catch((error)=>{
     if (error?.response?.status === 401) {
@@ -65,13 +62,10 @@ function getUserWishlist(userId, token){
   })
   .then((res)=>{
     wishList = res.data.map((item)=>item.dramaId);
-    // console.log(loveList);
   })
   .catch((error)=>{
     if (error?.response?.status === 401) {
-      // localStorage.removeItem('myCat');
       sweetAlert('登入逾時，請重新登入', 'warning');
-      //alert('登入逾時，請重新登入');
       localStorage.clear();
       setTimeout(() => {
         window.location.reload();

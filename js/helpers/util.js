@@ -11,15 +11,12 @@ export function timeStampToTime(timeStamp){
 
 export function sweetAlert(text,icon){
   Swal.fire({
-      // title: `加入購物車成功`,
       text: text,
       icon: icon,
       confirmButtonText: 'OK',
       width: '28em',
       customClass: {
         confirmButton: 'btn btn-primary rounded-pill px-3',
-
-        //cancelButton: 'btn btn-danger'
       },
       buttonsStyling: false
   })
@@ -43,10 +40,6 @@ export function toggleLoading(){
   bg.classList.toggle("d-block") // 切換class
 }
 
-// function toggleLoading(show) {
-//   //show的參數，從外部傳入如果是true 就 開啟loading，false 就關閉
-//   document.querySelector(".loading").style.display = show ? 'block' : 'none';
-// };
 
 export function localLoginChecker() {
     const localJWT = localStorage.getItem('token');

@@ -3,10 +3,8 @@ export function listenFormInput(form, constraints){//監聽input輸入是否符�
     inputs.forEach((item)=>{
       item.addEventListener('change',function(e){
         let itemName = item.getAttribute('name');
-        //console.log(signUpForm.querySelector(`[data-message=${itemName}]`))
         form.querySelector(`[data-message=${itemName}]`).textContent = '';//先將錯誤訊息清空
         const errors = validate(form, constraints, {fullMessages: false}) || '';
-        //console.log(errors);
         if(errors){//如果error有值，將error訊息印出
           renderFormError(form, errors);
         }

@@ -14,8 +14,6 @@ function addList(list, dramaId){
     })
     .then((response)=>{
         sweetAlertToast(`已加入${listName}`, "success", 2000);
-        //sweetAlert(`已加入${listName}`, "success")
-        //alert(`已加入${listName}`);
         setTimeout(() => {
           window.location.reload();
         }, 1000);
@@ -23,7 +21,6 @@ function addList(list, dramaId){
     })
     .catch((error)=>{
       if (error?.response?.status === 401) {
-        // localStorage.removeItem('myCat');
         sweetAlert('登入逾時，請重新登入', 'warning');
         localStorage.clear();
         setTimeout(() => {
@@ -51,7 +48,6 @@ function addList(list, dramaId){
     })
     .then((res)=>{
         id = res.data[0].id;
-        //console.log(res.data[0].id)
         //delete該篇
         axios.delete(`${baseUrl}/600/${list}/${id}`,{
           headers:{
@@ -80,7 +76,6 @@ function addList(list, dramaId){
     .catch((error)=>{
       if (error?.response?.status === 401) {
         sweetAlert('登入逾時，請重新登入', 'warning');
-        //alert('登入逾時，請重新登入');
         localStorage.clear();
         setTimeout(() => {
           window.location.reload();
@@ -100,7 +95,6 @@ export function updateList(e){
     
     if(localLoginChecker()==null){
       sweetAlert('請先登入', 'warning');
-      //alert('請先登入');
       return 
     }
   

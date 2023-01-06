@@ -46,14 +46,12 @@ function getUserInfo(){
         }
     })
     .then((res)=>{
-        //console.log(res.data);
         userData = res.data;
         renderUserInfo(userData);
     })
     .catch((error)=>{
         if (error?.response?.status === 401) {
             console.log(error?.response);
-            // localStorage.removeItem('myCat');
             localStorage.clear();
             sweetAlert('登入逾時，請嘗試重新登入','warning');
             setTimeout(() => {
@@ -96,7 +94,6 @@ function updatePassword(data){
         }
     })
     .then((response)=>{
-        console.log(response.data);
         updatePwdForm.reset();
         sweetAlert('更新密碼成功，請重新登入','success');
         localStorage.clear();
@@ -107,7 +104,6 @@ function updatePassword(data){
     .catch((error)=>{
         if (error?.response?.status === 401) {
             console.log(error?.response);
-            // localStorage.removeItem('myCat');
             localStorage.clear();
             sweetAlert('登入逾時，請嘗試重新登入','warning');
             setTimeout(() => {

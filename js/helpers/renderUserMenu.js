@@ -35,8 +35,8 @@ export function logout(event) {
     //alert('已登出');
     setTimeout(() => {
       
-      //window.location.replace('/'); //local路徑
-      window.location.replace('/My-K-Drama-List/index.html'); //github page路徑
+      window.location.replace('/'); //local路徑
+      //window.location.replace('/My-K-Drama-List/index.html'); //github page路徑
     }, 1500);
 }
 

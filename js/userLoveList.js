@@ -14,16 +14,11 @@ function getUserWishlist(userId, token){
       }
     })
     .then((res)=>{
-      //wishList = res.data.map((item)=>item.dramaId);
-      console.log(res.data);
       renderWishList(res.data)
-      // console.log(loveList);
     })
     .catch((error)=>{
       if (error?.response?.status === 401) {
-        // localStorage.removeItem('myCat');
         sweetAlert('登入逾時，請重新登入', 'warning');
-        //alert('登入逾時，請重新登入');
         localStorage.clear();
         setTimeout(() => {
             window.location.replace('../../index.html');
