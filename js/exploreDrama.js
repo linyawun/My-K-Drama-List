@@ -157,7 +157,8 @@ function checkUrl(){
   }else if(args.split("=")[0]=="type"){
       dramaType = [location.href.split("=")[1]];
   }
-  if(dramaType.length ==0 && dramaName == undefined){
+
+  if(dramaType.length == 0 && dramaName == undefined){
         getDramas();
   }else{
       const requirement = {
@@ -166,7 +167,9 @@ function checkUrl(){
           "dramaYear": '',
           "dramaRank": '' 
       };
-      dramaTypeInput.value = decodeURI(dramaType);//將類型填入input欄位
+      if(dramaType.length!=0){
+        $('.selectpicker').selectpicker('val', decodeURI(dramaType)); //類型填入input欄位
+      }
       dramaNameInput.value = dramaName==undefined? '':decodeURI(dramaName);//將名稱填入input欄位
       getDramas(requirement);
   }
