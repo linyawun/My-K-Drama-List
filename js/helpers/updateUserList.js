@@ -12,7 +12,7 @@ function addList(list, dramaId){
           "authorization": `Bearer ${token}`
         }
     })
-    .then((response)=>{
+    .then(()=>{
         sweetAlertToast(`已加入${listName}`, "success", 2000);
         setTimeout(() => {
           window.location.reload();
