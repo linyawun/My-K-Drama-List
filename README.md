@@ -5,9 +5,9 @@
 - [首頁](https://linyawun.github.io/My-K-Drama-List/)
 
 ### 影片
-- [local server demo](https://youtu.be/gnRhDJ7inOw)
+- [local server demo](https://youtu.be/Jw0OkDjDUtY)
   - local 端執行 json-server，可更動資料庫，功能包含註冊、更新密碼與加入最愛清單
-- [Vercel server demo](https://youtu.be/gmteJqf2KEo)
+- [Vercel server demo](https://youtu.be/GNeKoai9Npg)
   - Vercel 不能更新db.json，只能根據現有 db.json 呈現，功能較受限
  
 ## 相關資源
