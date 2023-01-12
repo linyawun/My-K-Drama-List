@@ -1,7 +1,7 @@
 # My K-Drama List
 ![image](https://user-images.githubusercontent.com/29305653/212081156-e7742dba-830a-4c5f-902f-315e175ba9ce.png)
 > 此為2022年參加六角學院 JavaScript 直播班的專題作品，由六角學院找設計師設計首頁版型與主視覺指引。
-> My K-Drama List是一個可以搜尋各種類韓劇並建立專屬自己韓劇清單的網站。
+> My K-Drama List是一個可以搜尋各類韓劇並建立專屬自己韓劇清單的網站。
 
 - [線上觀看連結](https://linyawun.github.io/My-K-Drama-List/)
 - [demo影片: local server demo](https://youtu.be/Jw0OkDjDUtY)
@@ -32,14 +32,14 @@
 - [x] 顯示會員的「最愛清單」/「待看清單」
 
 ## 畫面
-首頁-韓劇排行
-![](https://i.imgur.com/XErhdme.png =80%x)
+- 首頁-韓劇排行
+![image](https://user-images.githubusercontent.com/29305653/212088772-19626e54-610a-4abb-a5cd-5724501ee693.png)
 
-探索韓劇
-![](https://i.imgur.com/f1LaZub.png =80%x)
+- 探索韓劇
+![image](https://user-images.githubusercontent.com/29305653/212088788-3f43301c-70c7-4d4c-8115-860f4c068cd2.png)
 
-註冊
-![](https://i.imgur.com/NxOQGIx.png =80%x)
+- 註冊
+![image](https://user-images.githubusercontent.com/29305653/212088800-f4b43f9b-f878-40be-bbd1-617361963c49.png)
 
 ## 專案相關資源
 - [網站地圖](https://whimsical.com/AvxrPGndY3A3k55WpPFwvo)
@@ -58,4 +58,4 @@
 
 ## 聯絡作者
 你可以透過以下方式與我聯絡
-- [email](linyawun031@gmail.com)
+- email: linyawun031@gmail.com
