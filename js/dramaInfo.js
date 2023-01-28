@@ -25,45 +25,31 @@ function getDramaInfo(id){
       toggleLoading();
     })
 };
-function getUserLovelist(userId, token){
+function getUserList(userId, token){
   toggleLoading();
+  Promise.all([
   axios.get(`${baseUrl}/600/users/${userId}/lovelists`
   ,{
     headers:{
         "authorization": `Bearer ${token}`
     }
-  })
-  .then((res)=>{
-    loveList = res.data.map((item)=>item.dramaId);
-  })
-  .catch((error)=>{
-    if (error?.response?.status === 401) {
-      sweetAlert('登入逾時，請重新登入', 'warning');
-      localStorage.clear();
-      setTimeout(() => {
-        window.location.reload();
-      }, 1200);
-    }
-    console.log(error);
-  })
-  .finally(()=>{
-    toggleLoading();
-  })
-};
-function getUserWishlist(userId, token){
-  toggleLoading();
+  }),
   axios.get(`${baseUrl}/600/users/${userId}/wishlists`
   ,{
     headers:{
         "authorization": `Bearer ${token}`
     }
   })
-  .then((res)=>{
-    wishList = res.data.map((item)=>item.dramaId);
+])
+  .then((resAry) => {
+    loveList = resAry[0].data.map((item)=>item.dramaId);
+    wishList = resAry[1].data.map((item)=>item.dramaId);
+
+    getDramaInfo(id);
+    getComments(id);
   })
-  .catch((error)=>{
+  .catch(error => {
     if (error?.response?.status === 401) {
-      // localStorage.removeItem('myCat');
       sweetAlert('登入逾時，請重新登入', 'warning');
       localStorage.clear();
       setTimeout(() => {
@@ -75,7 +61,8 @@ function getUserWishlist(userId, token){
   .finally(()=>{
     toggleLoading();
   })
-};
+}
+
 function renderDramaData(dramaObj){
     const {id, name, img, year, type, intro, dramaSynopsis, rank, characters, wiki, ostLink} = dramaObj;
     let typeStr = '';
@@ -200,14 +187,6 @@ function renderComments(data){
   commentsList.innerHTML = str;
 }
 function init(){
-  if(localLoginChecker()){
-    renderUserMenu();
-    const userId = localStorage.getItem('userId');
-    const token = localStorage.getItem('token');
-    getUserLovelist(userId, token);
-    getUserWishlist(userId, token);
-  }
-
   if(id==undefined){
     //防呆，移轉頁面
     sweetAlert("您的操作錯誤，將移轉到探索韓劇",'error');
@@ -217,10 +196,16 @@ function init(){
     //location.href = "./exploreDrama.html";
   }
 
-  setTimeout(() => {
+  if(localLoginChecker()){
+    renderUserMenu();
+    const userId = localStorage.getItem('userId');
+    const token = localStorage.getItem('token');
+    getUserList(userId, token);//取得會員最愛蒐藏清單後，再取得韓劇資料留言
+  }else{
     getDramaInfo(id);
     getComments(id);
-  }, 0);
+  }
+
     
 }
 init();

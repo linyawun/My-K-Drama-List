@@ -25,45 +25,29 @@ function getHotDramas(){
     toggleLoading();
   })
 }
-function getUserLovelist(userId, token){
+function getUserList(userId, token){
   toggleLoading();
+  Promise.all([
   axios.get(`${baseUrl}/600/users/${userId}/lovelists`
   ,{
     headers:{
         "authorization": `Bearer ${token}`
     }
-  })
-  .then((res)=>{
-    loveList = res.data.map((item)=>item.dramaId);
-  })
-  .catch((error)=>{
-    if (error?.response?.status === 401) {
-      // localStorage.removeItem('myCat');
-      sweetAlert('登入逾時，請重新登入', 'warning');
-      //alert('登入逾時，請重新登入');
-      localStorage.clear();
-      setTimeout(() => {
-        window.location.reload();
-      }, 1200);
-    }
-    console.log(error);
-  })
-  .finally(()=>{
-    toggleLoading();
-  })
-};
-function getUserWishlist(userId, token){
-  toggleLoading();
+  }),
   axios.get(`${baseUrl}/600/users/${userId}/wishlists`
   ,{
     headers:{
         "authorization": `Bearer ${token}`
     }
   })
-  .then((res)=>{
-    wishList = res.data.map((item)=>item.dramaId);
+])
+  .then((resAry) => {
+    loveList = resAry[0].data.map((item)=>item.dramaId);
+    wishList = resAry[1].data.map((item)=>item.dramaId);
+
+    getDramasAndArticles();
   })
-  .catch((error)=>{
+  .catch(error => {
     if (error?.response?.status === 401) {
       sweetAlert('登入逾時，請重新登入', 'warning');
       localStorage.clear();
@@ -76,7 +60,7 @@ function getUserWishlist(userId, token){
   .finally(()=>{
     toggleLoading();
   })
-};
+}
 function renderHotDramas(hotDramas){
   let str = '';
   hotDramaList.innerHTML = '';
@@ -209,24 +193,22 @@ function renderArticleList(data){
     articlesPreview.innerHTML = str;
 
 }
-
+function getDramasAndArticles(){
+  getHotDramas();
+  for(const category of categoryAry){
+      getCategoryDramas(category);
+  }
+  getArticles();
+}
 function init(){
-  
   if(localLoginChecker()){
     renderUserMenu('index');
     const token = localStorage.getItem('token');
     const userId = localStorage.getItem('userId');
-    getUserLovelist(userId, token);
-    getUserWishlist(userId, token);
+    getUserList(userId, token);//取得最愛與蒐藏清單，成功後再取得韓劇與文章資料
+  }else{
+    getDramasAndArticles();
   }
-  setTimeout(()=>{
-    getHotDramas();
-    for(const category of categoryAry){
-      getCategoryDramas(category);
-    }
-    getArticles();
-  }, 200);
-
 }
 init();
 
@@ -245,11 +227,3 @@ dramaListAll.forEach((item)=>{
 //選擇韓劇種類:
 //http://localhost:3000/dramas?type_like=愛情
 
-
-// 第三人稱復仇
-// 殭屍校園
-// 惡之花
-// 以吾之名
-// 惡之花
-// 魷魚遊戲
-// 模範刑警

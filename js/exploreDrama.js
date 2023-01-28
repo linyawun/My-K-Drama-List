@@ -45,46 +45,31 @@ function getDramas(requirement=null){
             })
     }
 
-}
-function getUserLovelist(userId, token){
+};
+function getUserList(userId, token){
   toggleLoading();
+  Promise.all([
   axios.get(`${baseUrl}/600/users/${userId}/lovelists`
   ,{
     headers:{
         "authorization": `Bearer ${token}`
     }
-  })
-  .then((res)=>{
-    loveList = res.data.map((item)=>item.dramaId);
-  })
-  .catch((error)=>{
-    if (error?.response?.status === 401) {
-      sweetAlert('登入逾時，請重新登入', 'warning');
-      localStorage.clear();
-      setTimeout(() => {
-        window.location.reload();
-      }, 1200);
-    }
-    console.log(error);
-  })
-  .finally(()=>{
-    toggleLoading();
-  })
-};
-function getUserWishlist(userId, token){
-  toggleLoading();
+  }),
   axios.get(`${baseUrl}/600/users/${userId}/wishlists`
   ,{
     headers:{
         "authorization": `Bearer ${token}`
     }
   })
-  .then((res)=>{
-    wishList = res.data.map((item)=>item.dramaId);
+])
+  .then((resAry) => {
+    loveList = resAry[0].data.map((item)=>item.dramaId);
+    wishList = resAry[1].data.map((item)=>item.dramaId);
+
+    checkUrl(); 
   })
-  .catch((error)=>{
+  .catch(error => {
     if (error?.response?.status === 401) {
-      // localStorage.removeItem('myCat');
       sweetAlert('登入逾時，請重新登入', 'warning');
       localStorage.clear();
       setTimeout(() => {
@@ -96,7 +81,8 @@ function getUserWishlist(userId, token){
   .finally(()=>{
     toggleLoading();
   })
-};
+}
+
 function renderDramas(data){
     if (data.length==0){
         searchResult.innerHTML = `<h4 class="text-center">沒有符合條件的搜尋結果，試著放寬條件吧!</h4>`;
@@ -138,7 +124,7 @@ function renderDramas(data){
       </li>`;
     })
     searchResult.innerHTML = str;
-}
+};
 function resetForm(){
     $('#dramaType').selectpicker('val',['noneSelectedText']);
     $('#dramaYear').selectpicker('val','不限');
@@ -179,14 +165,10 @@ function init(){
     renderUserMenu();
     const token = localStorage.getItem('token');
     const userId = localStorage.getItem('userId');
-    getUserLovelist(userId, token);
-    getUserWishlist(userId, token);
-  }
-
-  setTimeout(() => {
+    getUserList(userId, token);//取得會員最愛和蒐藏清單後，再checkUrl
+  }else{
     checkUrl(); 
-  }, 200);
-  
+  }  
 
 }
 init();
