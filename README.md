@@ -1,6 +1,6 @@
 # My K-Drama List
 ![image](https://user-images.githubusercontent.com/29305653/212081156-e7742dba-830a-4c5f-902f-315e175ba9ce.png)
-> 此為2022年參加六角學院 JavaScript 直播班的專題作品，由六角學院找設計師設計首頁版型與主視覺指引。
+> 此為 2022 年參加六角學院 JavaScript 直播班的專題作品，由六角學院找設計師設計首頁版型與主視覺指引。
 > My K-Drama List是一個可以搜尋各類韓劇並建立專屬自己韓劇清單的網站。
 
 - [線上觀看連結](https://linyawun.github.io/My-K-Drama-List/)
